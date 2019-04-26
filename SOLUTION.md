@@ -34,6 +34,8 @@ browser cannot focus them, even if you directly run the focus method on them
 - I found it easier to click on the siblings first, and start focusing between siblings,
 which was easy enough: grab the current focused item, find the next / previous sibling,
 and run the focus method on it.
+- For the enter logic, I put data-attributes on the elements for the ids, and then sent that into
+the onSelect function
 - How I handled boundaries: 
   - Input doesn't have any items above it, so I broke out of the switch when an arrow up was
   encountered there
