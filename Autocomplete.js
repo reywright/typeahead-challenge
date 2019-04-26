@@ -47,7 +47,7 @@ export default class Autocomplete {
   onQueryChange(e) {
     const query = e.target.value
     // Get data for the dropdown
-    if (this.options.endpoint){
+    if (this.options.endpoint && query){
       this.requestDebounced(query)
     } else {
       let results = this.getResults(query, this.options.data);
