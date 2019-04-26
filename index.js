@@ -21,7 +21,7 @@ new Autocomplete(document.getElementById('state'), {
 new Autocomplete(document.getElementById('gh-user'), {
   endpoint: "https://api.github.com/search/users?q={query}&per_page={numOfResults}",
   endpointArrayKey: "items",
-  endpointDebounce: 2000,
+  endpointDebounce: 500,
   onSelect: (ghUserId) => {
     console.log('selected github user id:', ghUserId);
   },
