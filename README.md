@@ -1,44 +1,7 @@
-# Frame.io Frontend Take-home Exercise
-
-Hi there! Here is a coding exercise to help us assess your technical skills.
-Please plan to spend no more than 4 hours on this. We understand we may not be
-the only company asking for an exercise from you and want to be respectful of
-your time. The test is designed for all levels, and you could spend much longer
-perfecting your solution if you wanted to. We recommend you focus on the core
-requirements first, then work on any additional features if you have the time.
-
-By 4 hours in, please feel free to stop working and explain what refactors /
-code organization / enhancements you would have made with more time in the
-SOLUTION.md file.
-
-If you have any questions at any point during the exercise, please reach out to
-Anna at anna@frame.io.
-
-## Submission
-
-Please commit all your changes to this git repository. When you're done:
-
-1. Create a zip / tarball of this repository (excluding `node_modules`) and
-   submit it to https://www.dropbox.com/request/RonDKCswJNCcDnzPsQTH
-2. Email Anna to let her know you're done.
-
-## Overview
-
 We’ve built a simple Autocomplete/Typeahead component in vanilla JavaScript
 (compiled with Babel 7) that lets you type in a query and shows a list of
 matching results in a dropdown, just like how Google's search box works.
 
-To see this component in action, let's set up the repo:
-
-1. Run `npm install`
-2. Run `npm start` (runs `webpack-dev-server`)
-3. Open `http://localhost:8080` on your browser.
-
-Type "new" in the input, and you'll get a list of matching US states that start
-with "new".
-
-
-## Task
 
 Currently, the component can only query against a static data array and only
 works with mouse clicks. Your task is to:
@@ -58,13 +21,6 @@ works with mouse clicks. Your task is to:
 2. Implement keyboard shortcuts to navigate the results dropdown using up/down
    arrow keys and to select a result using the Enter key.
 
-Uncomment the relevant sections in `index.js` and `index.html` to implement a
-demo that looks like this:
-
-![Demo example screenshot](demo-example.png)
-
-
-## Requirements
 
 - The component should be reusable. It should be possible to have multiple
   instances of the component on the same page.
