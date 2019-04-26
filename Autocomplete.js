@@ -48,11 +48,10 @@ export default class Autocomplete {
     const query = e.target.value
     // Get data for the dropdown
     if (this.options.endpoint){
-      console.log(this.requestDebounced(query))
+      this.requestDebounced(query)
     } else {
       let results = this.getResults(query, this.options.data);
       results = results.slice(0, this.options.numOfResults);
-      console.log(results)
       this.updateDropdown(results);
     }
 
@@ -144,7 +143,6 @@ export default class Autocomplete {
         break;
     }
 
-
   }
 
   request(query){
@@ -156,10 +154,10 @@ export default class Autocomplete {
     const url = this.options.endpoint
     .replace("{query}", query)
     .replace("{numOfResults}", this.options.numOfResults)
+
     fetch(url).then(data => {
       return data.json() 
     }).then(json => {
-      console.log(this.options.endpointArrayKey)
       const newItems = json[this.options.endpointArrayKey].map(item => ({
         text: item.login,
         value: item.id        
