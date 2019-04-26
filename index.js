@@ -18,8 +18,11 @@ new Autocomplete(document.getElementById('state'), {
 
 
 // Github Users
-// new Autocomplete(document.getElementById('gh-user'), {
-//   onSelect: (ghUserId) => {
-//     console.log('selected github user id:', ghUserId);
-//   },
-// });
+new Autocomplete(document.getElementById('gh-user'), {
+  endpoint: "https://api.github.com/search/users?q={query}&per_page={numOfResults}",
+  endpointArrayKey: "items",
+  endpointDebounce: 2000,
+  onSelect: (ghUserId) => {
+    console.log('selected github user id:', ghUserId);
+  },
+});
